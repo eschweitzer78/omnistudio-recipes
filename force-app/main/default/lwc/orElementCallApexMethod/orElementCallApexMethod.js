@@ -11,6 +11,8 @@ import tmpl from "./orElementCallApexMethod.html";
 */
 
 export default class OmniElementCallApexMethod extends OmniscriptBaseElement {
+  @api greeting;
+
   render() {
     return tmpl;
   }
@@ -29,6 +31,7 @@ export default class OmniElementCallApexMethod extends OmniscriptBaseElement {
       // Replace with your own response handling
       let jsonData = JSON.parse(data);
       console.log('response', jsonData);
+      this.greeting = jsonData.result;
     })
     .catch(err => {
       // Replace with your own error handling
