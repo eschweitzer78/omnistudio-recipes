@@ -5,7 +5,7 @@ import OmniscriptRestApi from "omnistudio/omniscriptRestApi";
 import tmpl from "./orElementCallApexMethod.html";
 
 /*
-  Please refer to the disclaimer in README.rd at the root of this repo.
+  Please refer to the disclaimer in README.md at the root of this repo.
   This recipe is about calling Apex from an Omniscript element.
   The target Apex class should be implementing Callback as illustrated in orHelloWord.cls
 */
