@@ -1,8 +1,8 @@
 import { api, track } from "lwc";
-import { invokeApexMethod } from "omnistudio/omniscriptUtils";
+import { OmniscriptActionCommonUtil } from "omnistudio/omniscriptActionUtils";
 import OmniscriptBaseElement from "omnistudio/omniscriptBaseElement";
-import OmniscriptRestApi from "omnistudio/omniscriptRestApi";
 import tmpl from "./orElementCallApexMethod.html";
+
 
 /*
   Please refer to the disclaimer in README.md at the root of this repo.
@@ -18,25 +18,35 @@ export default class OmniElementCallApexMethod extends OmniscriptBaseElement {
     return tmpl;
   }
 
+  _actionUtil;
+  connectedCallback() {
+    this._actionUtil = new OmniscriptActionCommonUtil();
+  }
+
   handleGreetMe() {
     let elt = this.template.querySelector("input");
     this.name = elt ? elt.value || "Stranger" : "Stranger";
 
-    invokeApexMethod(OmniscriptRestApi.GenericInvoke2NoCont, {
-      input: JSON.stringify({
-        name: this.name,
-      }),
-      options: JSON.stringify({
-      }),
+    let config = this._actionUtil.getConfigForActionService({
       sClassName: "orHelloWorld",
-      sMethodName: "greet",
-    })
-    .then(data => {
+      sMethodName: "greet",  
+      input: {
+        name: this.name
+        },
+      options: {
+        },
+    });
+
+    // options above accepts the useContinuation boolean flag
+
+    this._actionUtil
+    .callActionService(config, this)
+    .then((data) => {
       // Replace with your own response handling
-      let jsonData = JSON.parse(data);
+      let jsonData = JSON.parse(data)
       this.greeting = jsonData.result;
     })
-    .catch(err => {
+    .catch((err) => {
       // Replace with your own error handling
       console.log("error", err);
     });
