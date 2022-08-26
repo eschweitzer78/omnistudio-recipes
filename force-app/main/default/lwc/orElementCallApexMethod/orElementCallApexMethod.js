@@ -9,7 +9,7 @@ import tmpl from "./orElementCallApexMethod.html";
   The target Apex class should be implementing Callable as illustrated in orHelloWord.cls
 */
 
-export default class OrElementCallApexMethod extends OmniscriptBaseElement {
+export default class orElementCallApexMethod extends OmniscriptBaseElement {
   @track name = "";
   @track greeting;
 
