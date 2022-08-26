@@ -18,7 +18,7 @@ export default class OmniElementCallApexMethod extends OmniscriptBaseElement {
     return tmpl;
   }
 
-  handleClick() {
+  handleGreetMe() {
     let elt = this.template.querySelector("input");
     this.name = elt ? elt.value || "Stranger" : "Stranger";
 
@@ -38,8 +38,13 @@ export default class OmniElementCallApexMethod extends OmniscriptBaseElement {
     })
     .catch(err => {
       // Replace with your own error handling
-      console.log('error', err);
+      console.log("error", err);
     });
+  }
+
+  handleTryItAgain() {
+    this.name = "";
+    this.greeting = null;
   }
 
   @api checkValidity() {
