@@ -1,4 +1,6 @@
 <template>
-    <button onclick={handleClick}>Click me</button>
-    <span if:true={greeting}>{greeting}</span>
+  <label for="name">Your name:</label>
+  <input id="name" type="text" value={name}>
+  <button onclick={handleClick}>Greet me</button>
+  <span if:true={greeting}>{greeting}</span>
 </template>

@@ -1,4 +1,4 @@
-import { api } from "lwc";
+import { api, track } from "lwc";
 import { invokeApexMethod } from "omnistudio/omniscriptUtils";
 import OmniscriptBaseElement from "omnistudio/omniscriptBaseElement";
 import OmniscriptRestApi from "omnistudio/omniscriptRestApi";
@@ -11,26 +11,29 @@ import tmpl from "./orElementCallApexMethod.html";
 */
 
 export default class OmniElementCallApexMethod extends OmniscriptBaseElement {
-  @api greeting;
+  @track name = "";
+  @track greeting;
 
   render() {
     return tmpl;
   }
 
   handleClick() {
+    let elt = this.template.querySelector("input");
+    this.name = elt ? elt.value || "Stranger" : "Stranger";
+
     invokeApexMethod(OmniscriptRestApi.GenericInvoke2NoCont, {
       input: JSON.stringify({
-        name: "Astro"
+        name: this.name,
       }),
       options: JSON.stringify({
       }),
       sClassName: "orHelloWorld",
-      sMethodName: "greet"
+      sMethodName: "greet",
     })
     .then(data => {
       // Replace with your own response handling
       let jsonData = JSON.parse(data);
-      console.log('response', jsonData);
       this.greeting = jsonData.result;
     })
     .catch(err => {

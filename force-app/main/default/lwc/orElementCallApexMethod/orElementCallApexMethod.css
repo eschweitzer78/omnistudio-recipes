@@ -1,3 +1,8 @@
-span {
-  margin-left: 1rem;
+label {
+  margin-right: 0.5rem;
+}
+
+button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
