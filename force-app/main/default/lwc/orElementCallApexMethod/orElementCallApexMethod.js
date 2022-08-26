@@ -3,7 +3,6 @@ import { OmniscriptActionCommonUtil } from "omnistudio/omniscriptActionUtils";
 import OmniscriptBaseElement from "omnistudio/omniscriptBaseElement";
 import tmpl from "./orElementCallApexMethod.html";
 
-
 /*
   Please refer to the disclaimer in README.md at the root of this repo.
   This recipe is about calling Apex from an Omniscript element.
