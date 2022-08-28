@@ -15,7 +15,7 @@ You can very well test an Integration Procedure or DataRaptor with your own user
 someone else. If you want to make sure it does the job for a specific category of users, check the
 <code>orTestIntegrationProcedure</code> and <code>orTestDataRaptor</code> Apex test method templates.
 
-## Going to a named previous step (and doing loops) in a Omniscript
+## Going to a named previous step (and doing loops) in an Omniscript
 
 You can go to a named previous step with the <code>orBaseMixinGoto</code> recipe. Loops can be set up by combining a GoTo step
 and conditional visibility.
