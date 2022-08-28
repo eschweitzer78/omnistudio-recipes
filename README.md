@@ -8,3 +8,8 @@ Some of these recipes leverage undocumented or very little documented code which
 ## Calling APEX from an Omnistudio Element
 
 There is a method to call APEX when you leverage the OmniscriptBaseMixin, but no real documentation when you want to do that when implementing OmniscriptBaseElement or are subclassing an existing widget class. Look no further and refer to the <code>orElementCallApexMethod</code> recipe.
+
+## Testing an Integration Procedure being run as a given user
+
+You can very well test an Integration Procedure with your own user, but there is no provision to test as someone else. If you want
+to make sure it does the job for a specific category of users, check the <code>orTestIntegrationProcedure</code> Apex test method template.
