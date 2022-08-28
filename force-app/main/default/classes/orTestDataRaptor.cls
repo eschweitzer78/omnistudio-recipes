@@ -1,3 +1,12 @@
+/**
+  Please refer to the disclaimer in README.md at the root of this repo.
+  This recipe is about testing a DataRaptor from Apex, and possibly running as a different user.
+  
+  @author Emmanuel Schweitzer
+  @version 1.0
+
+ */
+
 @isTest(seeAllData=true)
 private class orTestDataRaptor {
     static @isTest void orTestDataRaptor() {

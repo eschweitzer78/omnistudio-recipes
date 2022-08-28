@@ -14,3 +14,8 @@ There is a method to call APEX when you leverage the OmniscriptBaseMixin, but no
 You can very well test an Integration Procedure or DataRaptor with your own user in the associated Designer, but there is no provision to test as
 someone else. If you want to make sure it does the job for a specific category of users, check the
 <code>orTestIntegrationProcedure</code> and <code>orTestDataRaptor</code> Apex test method templates.
+
+## Going to a named previous step (and doing loops) in a Omniscript
+
+You can go to a named previous step with the <code>orBaseMixinGoto</code> recipe. Loops can be set up by combining a GoTo step
+and conditional visibility.

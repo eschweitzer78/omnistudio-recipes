@@ -3,4 +3,5 @@
   <apiVersion>55.0</apiVersion>
   <isExposed>true</isExposed>
   <runtimeNamespace>omnistudio</runtimeNamespace>
+  <masterLabel>Element Call Apex Method</masterLabel>
 </LightningComponentBundle>
