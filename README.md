@@ -12,7 +12,12 @@ There is a method to call APEX when you leverage the OmniscriptBaseMixin, but no
 ## Calling an Integration Procedure from an LWC deriving from OmniscriptBaseMixin
 
 We leverage the documented method to call APEX from an OmniscriptBaseMixin and illustrate how you can apply that to invoking
-an integration procedure. Check the <code>orBaseMixinCallIP</code> recipe.
+an Integration Procedure (IP). Check the <code>orBaseMixinCallIP</code> recipe.
+
+Kindly note that while it may be useful in specific circumstances, that pattern is not best practice. You would generally keep
+the invocation of the IP as an action in your omniscript and your Custom LWC separate. You can use mappings in the Omnistudio
+designer (see Custom Lighning Web Component Properties) to get the data retrieved from your IP tied to specific api attributes
+of your LWC.
 
 ## Testing an Integration Procedure or DataRaptor being run as a given user
 
