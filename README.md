@@ -9,6 +9,11 @@ Some of these recipes leverage undocumented or very little documented code which
 
 There is a method to call APEX when you leverage the OmniscriptBaseMixin, but no real documentation when you want to do that when implementing OmniscriptBaseElement or are subclassing an existing widget class. Look no further and refer to the <code>orElementCallApexMethod</code> recipe.
 
+## Calling an Integration Procedure from an LWC deriving from OmniscriptBaseMixin
+
+We leverage the documented method to call APEX from an OmniscriptBaseMixin and illustrate how you can apply that to invoking
+an integration procedure. Check the <code>orBaseMixinCallIP</code> recipe.
+
 ## Testing an Integration Procedure or DataRaptor being run as a given user
 
 You can very well test an Integration Procedure or DataRaptor with your own user in the associated Designer, but there is no provision to test as

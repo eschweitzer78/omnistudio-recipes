@@ -24,10 +24,10 @@
 
  */
 
-import { LightningElement, api } from 'lwc';
-import sldsTemplate from './orBaseMixinGoTo.html';
-import ndsTemplate from './orBaseMixinGoTo_nds.html';
-import { OmniscriptBaseMixin } from 'omnistudio/omniscriptBaseMixin';
+import { LightningElement, api } from "lwc";
+import sldsTemplate from "./orBaseMixinGoTo.html";
+import ndsTemplate from "./orBaseMixinGoTo_nds.html";
+import { OmniscriptBaseMixin } from "omnistudio/omniscriptBaseMixin";
 
 export default class OrBaseMixinGoTo extends OmniscriptBaseMixin(LightningElement) {
   @api target;
