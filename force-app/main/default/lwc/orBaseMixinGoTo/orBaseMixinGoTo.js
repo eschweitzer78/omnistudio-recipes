@@ -62,7 +62,7 @@ export default class OrBaseMixinGoTo extends OmniscriptBaseMixin(LightningElemen
 
           super.omniNavigateTo(this.target);
         } else {
-          console.error("Error in goto LWC -> No step-name property was provided");
+          console.error("Error in goto LWC -> No target property was provided");
         }
       }
     } catch (err) { 
